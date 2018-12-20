@@ -27,11 +27,8 @@ public class utama extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
-        jenisPinjaman = new javax.swing.JButton();
-        jenisSimpanan = new javax.swing.JButton();
         transPinjaman = new javax.swing.JButton();
         transSimpanan = new javax.swing.JButton();
         nasabah = new javax.swing.JButton();
@@ -40,23 +37,7 @@ public class utama extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setText("Jenis");
-
         jLabel8.setText("Transaksi");
-
-        jenisPinjaman.setText("Pinjaman");
-        jenisPinjaman.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jenisPinjamanActionPerformed(evt);
-            }
-        });
-
-        jenisSimpanan.setText("Simpanan");
-        jenisSimpanan.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jenisSimpananActionPerformed(evt);
-            }
-        });
 
         transPinjaman.setText("Pinjaman");
         transPinjaman.addActionListener(new java.awt.event.ActionListener() {
@@ -98,66 +79,48 @@ public class utama extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(38, 38, 38)
-                            .addComponent(jLabel5))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(78, 78, 78)
-                            .addComponent(jLabel1)
-                            .addGap(120, 120, 120)
-                            .addComponent(jLabel8))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(57, 57, 57)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jenisPinjaman)
-                                .addComponent(jenisSimpanan))
-                            .addGap(79, 79, 79)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(transSimpanan)
-                                .addComponent(transPinjaman))))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                        .addGap(57, 57, 57)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton7, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(idNasabah, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(nasabah, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                .addContainerGap(339, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(114, 114, 114)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(transSimpanan, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(transPinjaman, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(38, 38, 38)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jButton7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(idNasabah, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel5)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(nasabah, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(132, 132, 132)
+                        .addComponent(jLabel8)))
+                .addContainerGap(62, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(129, 129, 129)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(jLabel8))
+                .addGap(21, 21, 21)
+                .addComponent(jLabel8)
+                .addGap(18, 18, 18)
+                .addComponent(transPinjaman)
+                .addGap(18, 18, 18)
+                .addComponent(transSimpanan)
+                .addGap(32, 32, 32)
+                .addComponent(nasabah)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel5)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jenisPinjaman)
-                    .addComponent(transPinjaman))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jenisSimpanan)
-                    .addComponent(transSimpanan))
-                .addGap(33, 33, 33)
-                .addComponent(nasabah)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(34, 34, 34)
                 .addComponent(idNasabah)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(51, 51, 51)
                 .addComponent(jButton7)
-                .addContainerGap(58, Short.MAX_VALUE))
+                .addContainerGap(97, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jenisPinjamanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jenisPinjamanActionPerformed
-        new jenisSimpanan().setVisible(true);
-        dispose();
-    }//GEN-LAST:event_jenisPinjamanActionPerformed
 
     private void idNasabahActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_idNasabahActionPerformed
         new idNasabah().setVisible(true);
@@ -173,11 +136,6 @@ public class utama extends javax.swing.JFrame {
         new transPinjaman().setVisible(true);
         dispose();
     }//GEN-LAST:event_transPinjamanActionPerformed
-
-    private void jenisSimpananActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jenisSimpananActionPerformed
-        new jenisSimpanan().setVisible(true);
-        dispose();
-    }//GEN-LAST:event_jenisSimpananActionPerformed
 
     private void transSimpananActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_transSimpananActionPerformed
         new transSimpanan().setVisible(true);
@@ -248,11 +206,8 @@ public class utama extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton idNasabah;
     private javax.swing.JButton jButton7;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel8;
-    private javax.swing.JButton jenisPinjaman;
-    private javax.swing.JButton jenisSimpanan;
     private javax.swing.JButton nasabah;
     private javax.swing.JButton transPinjaman;
     private javax.swing.JButton transSimpanan;
