@@ -7,7 +7,7 @@ package tugasbesar2018;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.ResultSet;
+import java.sql.PreparedStatement;
 import java.sql.Statement;
 import javax.swing.JOptionPane;
 
@@ -16,21 +16,21 @@ import javax.swing.JOptionPane;
  * @author HP
  */
 public class koneksi {
-com.mysql.jdbc.Connection conn;
-Statement st;
-ResultSet rs; 
-public void setkoneksi()
-{
-    try
-    {
-        Class.forName("com.mysql.jdbc.Driver");
-        conn=(com.mysql.jdbc.Connection) DriverManager.getConnection("jdbc:mysql://localhost/koperasi","root","root");
-        st=conn.createStatement();
-    }
-    catch(Exception e)
-    {
-        JOptionPane.showMessageDialog(null,"<Error> Koneksikan Xampp Terlebih Dahulu : "+e,"Koneksi Gagal",JOptionPane.WARNING_MESSAGE);
-    }
 
-}
+    public static PreparedStatement prepareStatement(String insert) {
+        return null;
+        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+    public Connection conn;
+    public Statement stm;
+    
+    public void config(){
+        try {
+            Class.forName("com.mysql.jdbc.Driver");
+            conn = DriverManager.getConnection("jdbc:mysql://localhost/servis", "root","");
+            stm = conn.createStatement();
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Koneksi Gagal "+e.getMessage());
+        }
+    }
 }
