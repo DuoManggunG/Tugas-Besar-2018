@@ -6,43 +6,26 @@
 package tugasbesar2018;
 
 import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
 import javax.swing.JOptionPane;
+
 
 /**
  *
  * @author HP
  */
 public class Connection {
-    
-    private Connection connection;
-    
-    public Connection getConnection(){
-        return connection;
-    }
-    
-    //untuk koneksi ke database
-    public void dbCOnnection(){
-        try{
-            Class.forName("");//mus
-            
-            //cek Database
-            try{
-            String url, user, password;
-            url="";//mus
-            user="root";
-            password="";
-            connection = DriverManager.getConnection(url, user, password);
-            System.out.println("Koneksi Sukses");
-            
-            }catch (SQLException se){
-                JOptionPane.showMessageDialog(null, "Konksi Gagal!"+ se);
-                System.exit(0);
-            }catch (ClassNotFoundException cnfe){
-                JOptionPane.showMessageDialog(null, "Driver Tidak Ditemukan!" + cnfe);
-                System.exit(0);
+    com.mysql.jdbc.Connection conn;
+    Statement st;
+    ResultSet rs; 
+public void setConnection(){
+            try {
+                Class.forName("com.mysql.jdbc.Driver");
+                conn=(com.mysql.jdbc.Connection) DriverManager.getConnection("jdbc:mysql://localhost/koperasi","root","root");
+            st=conn.createStatement();
+            } catch (Exception e) {
+                 JOptionPane.showMessageDialog(null,"<Error> Koneksikan Xampp Terlebih Dahulu : "+e,"Koneksi Gagal",JOptionPane.WARNING_MESSAGE);
             }
-        }
-        public static void main(String[] kon) {
-        new Koneksi().dbConnection();
     }
 }
