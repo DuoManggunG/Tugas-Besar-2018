@@ -133,7 +133,7 @@ public class utama extends javax.swing.JFrame {
     }//GEN-LAST:event_nasabahActionPerformed
 
     private void transPinjamanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_transPinjamanActionPerformed
-        new transPinjaman().setVisible(true);
+        new trans_pinjaman().setVisible(true);
         dispose();
     }//GEN-LAST:event_transPinjamanActionPerformed
 
