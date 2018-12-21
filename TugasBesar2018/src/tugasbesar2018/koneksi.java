@@ -1,36 +1,26 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package tugasbesar2018;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.Statement;
+import com.mysql.jdbc.Connection;
+import java.sql.*;
 import javax.swing.JOptionPane;
 
-/**
- *
- * @author HP
- */
 public class koneksi {
+Connection conn;
+Statement st;
+ResultSet rs; 
+public void setkoneksi()
+{
+    try
+    {
+        Class.forName("com.mysql.jdbc.Driver");
+        conn=(Connection) DriverManager.getConnection("jdbc:mysql://localhost/koperasi","root","");
+        st=conn.createStatement();
+    }
+    catch(Exception e)
+    {
+        JOptionPane.showMessageDialog(null,"<Error> Koneksikan Xampp Terlebih Dahulu : "+e,"Koneksi Gagal",JOptionPane.WARNING_MESSAGE);
+    }
 
-    public static PreparedStatement prepareStatement(String insert) {
-        return null;
-        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-    public Connection conn;
-    public Statement stm;
-    
-    public void config(){
-        try {
-            Class.forName("com.mysql.jdbc.Driver");
-            conn = DriverManager.getConnection("jdbc:mysql://localhost/servis", "root","");
-            stm = conn.createStatement();
-        } catch (Exception e) {
-            JOptionPane.showMessageDialog(null, "Koneksi Gagal "+e.getMessage());
-        }
-    }
+}
 }
