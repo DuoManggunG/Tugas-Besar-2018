@@ -1,18 +1,8 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package tugasbesar2018;
 
-/**
- *
- * @author ACER
- */
 public class utama extends javax.swing.JFrame {
 
-    /**
-     * Creates new form utama
-     */
     public utama() {
         initComponents();
     }

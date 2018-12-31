@@ -81,14 +81,14 @@
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="vusername" max="32767" attributes="0"/>
                       <Group type="102" attributes="0">
                           <Component id="jToggleButton1" min="-2" pref="65" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Component id="jButton1" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="0" pref="99" max="32767" attributes="0"/>
                       </Group>
-                      <Component id="vusername" max="32767" attributes="0"/>
-                      <Component id="vpassword" max="32767" attributes="0"/>
+                      <Component id="vpassword" alignment="0" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
@@ -105,8 +105,8 @@
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="vpassword" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jLabel8" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="vpassword" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
@@ -134,8 +134,6 @@
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="vusernameActionPerformed"/>
           </Events>
-        </Component>
-        <Component class="javax.swing.JTextField" name="vpassword">
         </Component>
         <Component class="javax.swing.JToggleButton" name="jToggleButton1">
           <Properties>
@@ -168,6 +166,11 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="PASSWORD"/>
           </Properties>
+        </Component>
+        <Component class="javax.swing.JPasswordField" name="vpassword">
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="vpasswordActionPerformed"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>
